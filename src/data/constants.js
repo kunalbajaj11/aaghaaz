@@ -7,6 +7,8 @@ export const SITE = {
   deckTagline: 'Teaming together to soar high',
   /** Eagle + ring mark, trimmed from your deck screenshot (`public/brand/`) */
   logoMark: '/brand/aaghaaz-eagle-mark.png',
+  /** Same mark with transparent background — header only */
+  logoMarkHeader: '/brand/aaghaaz-eagle-mark-header.png',
   phoneDisplay: '+971 52 8136677',
   phoneE164: '+971528136677',
   email: 'Aaghaazevents@gmail.com',
@@ -25,7 +27,6 @@ export const SITE = {
 export const NAV_LINKS = [
   { id: 'home', label: 'Home', href: '#home' },
   { id: 'about', label: 'About', href: '#about' },
-  { id: 'vision', label: 'Vision', href: '#vision' },
   { id: 'events', label: 'Events', href: '#events' },
   { id: 'services', label: 'Services', href: '#services' },
   { id: 'gallery', label: 'Gallery', href: '#gallery' },

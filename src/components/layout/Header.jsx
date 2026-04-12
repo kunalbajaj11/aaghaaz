@@ -45,28 +45,29 @@ export function Header() {
       >
         Skip to main content
       </a>
-      <Container className="flex h-[4.25rem] items-center justify-between gap-4">
+      <Container className="flex h-[4.75rem] items-center justify-between gap-4 sm:h-[5rem]">
         <a
           href="#home"
-          className="group flex items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aaghaaz-teal-light"
+          aria-label={`${SITE.name}, home`}
+          className="group flex min-w-0 shrink-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aaghaaz-teal-light"
           onClick={(e) => {
             e.preventDefault()
             scrollToHash('#home')
           }}
         >
           <span
-            className={`font-display text-xl tracking-tight sm:text-2xl ${scrolled ? 'text-aaghaaz-950' : 'text-white'}`}
-          >
-            {SITE.name}
-          </span>
-          <span
-            className={`hidden rounded-full border px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider sm:inline ${
-              scrolled
-                ? 'border-aaghaaz-teal/25 bg-white/80 text-aaghaaz-800'
-                : 'border-white/25 bg-white/10 text-white/90'
+            className={`relative flex h-12 w-12 shrink-0 items-center justify-center sm:h-14 sm:w-14 lg:h-[3.75rem] lg:w-[3.75rem] ${
+              scrolled ? '' : 'drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]'
             }`}
           >
-            UAE
+            <img
+              src={SITE.logoMarkHeader}
+              alt=""
+              width={60}
+              height={60}
+              className="block max-h-full max-w-full object-contain object-center"
+              decoding="async"
+            />
           </span>
         </a>
 

@@ -30,7 +30,7 @@ export function Vision() {
       className="relative scroll-mt-24 overflow-hidden bg-aaghaaz-950 py-20 text-white sm:py-24"
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
         aria-hidden
         style={{
           backgroundImage: `url(${SITE.logoMark})`,

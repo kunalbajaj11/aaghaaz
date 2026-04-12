@@ -13,12 +13,25 @@ export function Footer() {
   return (
     <footer className="border-t border-aaghaaz-900/10 bg-aaghaaz-950 text-white">
       <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-        <div className="space-y-4">
-          <p className="font-display text-2xl">{SITE.name}</p>
-          <p className="max-w-xs text-sm leading-relaxed text-white/70">
-            A premium women’s collective and event studio in Sharjah—curating empowerment,
-            entrepreneurship, and community experiences across the UAE.
-          </p>
+        <div className="flex w-full min-w-0 items-start justify-center md:justify-start lg:pr-8">
+          <a
+            href="#home"
+            aria-label={`${SITE.name}, home`}
+            className="block w-full rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aaghaaz-teal-light"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToHash('#home')
+            }}
+          >
+            <img
+              src={SITE.logoMark}
+              alt=""
+              width={512}
+              height={512}
+              className="block h-auto w-full object-contain object-center md:object-left"
+              decoding="async"
+            />
+          </a>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aaghaaz-teal-light/90">

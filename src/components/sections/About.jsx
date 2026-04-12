@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { fadeUp, staggerContainer } from '../../lib/motion'
+import { TEAM_MEMBERS } from '../../data/team'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
 
@@ -76,6 +77,53 @@ export function About() {
               ))}
             </ul>
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="mt-20 border-t border-aaghaaz-900/10 pt-16"
+          aria-labelledby="about-leadership-heading"
+        >
+          <motion.h3
+            variants={fadeUp}
+            id="about-leadership-heading"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-aaghaaz-teal-800"
+          >
+            Leadership
+          </motion.h3>
+          <ul className="mt-8 grid list-none gap-8 sm:grid-cols-2 sm:gap-10 lg:max-w-4xl">
+            {TEAM_MEMBERS.map((member) => (
+              <motion.li key={member.id} variants={fadeUp}>
+                <article className="overflow-hidden rounded-2xl border border-aaghaaz-900/10 bg-white shadow-soft ring-1 ring-aaghaaz-900/5">
+                  <div className="aspect-[4/5] overflow-hidden bg-aaghaaz-cream">
+                    <img
+                      src={member.image}
+                      alt={member.imageAlt}
+                      className="h-full w-full object-cover object-top"
+                      width={720}
+                      height={900}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5 sm:p-6">
+                    {member.name ? (
+                      <>
+                        <p className="font-display text-xl text-aaghaaz-950">{member.name}</p>
+                        <p className="mt-1 text-sm font-semibold text-aaghaaz-teal-800">{member.role}</p>
+                      </>
+                    ) : (
+                      <p className="font-display text-lg leading-snug text-aaghaaz-950 sm:text-xl">
+                        {member.role}
+                      </p>
+                    )}
+                  </div>
+                </article>
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
       </Container>
     </section>

@@ -17,7 +17,7 @@ export function Gallery() {
           eyebrow="Gallery"
           titleId="gallery-heading"
           title="A glimpse of the room—before you step in."
-          description="Placeholder imagery for launch; replace with your photography and reels as they are ready. Every frame here is chosen to echo warmth, polish, and real community."
+          description="Moments from our halls, stages, and community programmes—health awareness, gatherings, media, and the people who make it all happen."
         />
         <motion.div
           variants={staggerContainer}

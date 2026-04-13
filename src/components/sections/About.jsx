@@ -94,15 +94,18 @@ export function About() {
           >
             Leadership
           </motion.h3>
-          <ul className="mt-8 grid list-none gap-8 sm:grid-cols-2 sm:gap-10 lg:max-w-4xl">
-            {TEAM_MEMBERS.map((member) => (
+          <ul className="mt-8 grid list-none gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:max-w-6xl">
+            {TEAM_MEMBERS.map((member) => {
+              const isCeo = member.id === 'ceo'
+
+              return (
               <motion.li key={member.id} variants={fadeUp}>
                 <article className="overflow-hidden rounded-2xl border border-aaghaaz-900/10 bg-white shadow-soft ring-1 ring-aaghaaz-900/5">
-                  <div className="aspect-[4/5] overflow-hidden bg-aaghaaz-cream">
+                  <div className={`aspect-[4/5] overflow-hidden ${isCeo ? 'bg-white' : 'bg-aaghaaz-cream'}`}>
                     <img
                       src={member.image}
                       alt={member.imageAlt}
-                      className="h-full w-full object-cover object-top"
+                      className={`h-full w-full ${isCeo ? 'object-contain p-2' : 'object-cover object-top'}`}
                       width={720}
                       height={900}
                       loading="lazy"
@@ -122,7 +125,7 @@ export function About() {
                   </div>
                 </article>
               </motion.li>
-            ))}
+            )})}
           </ul>
         </motion.div>
       </Container>

@@ -14,4 +14,11 @@ export const TEAM_MEMBERS = [
     image: '/team/director-operation-support.png',
     imageAlt: 'Portrait of the Director of Operation and Support',
   },
+  {
+    id: 'faisal-sheikh',
+    name: '',
+    role: 'Faisal Sheikh',
+    image: '/team/faisal-sheikh.png',
+    imageAlt: 'Portrait of Faisal Sheikh',
+  },
 ]

@@ -3,22 +3,22 @@ export const TEAM_MEMBERS = [
   {
     id: 'ceo',
     name: '',
-    role: 'CEO - Dr. Shaheen',
+    role: 'Dr Shahin Ismail Khatri - CEO',
     image: '/team/ceo-dr-shaheen.png',
-    imageAlt: 'Portrait of Dr. Shaheen, CEO',
+    imageAlt: 'Portrait of Dr Shahin Ismail Khatri, CEO',
   },
   {
     id: 'director-ops',
     name: '',
-    role: 'Director - Operation & Support',
+    role: 'Faraz Ahmed Hussaini - Operations & Support',
     image: '/team/director-operation-support.png',
-    imageAlt: 'Portrait of the Director of Operation and Support',
+    imageAlt: 'Portrait of Faraz Ahmed Hussaini, Operations and Support',
   },
   {
     id: 'faisal-sheikh',
     name: '',
-    role: 'Faisal Sheikh',
+    role: 'Faisal Bakhtiar - Sales & Marketing',
     image: '/team/faisal-sheikh.png',
-    imageAlt: 'Portrait of Faisal Sheikh',
+    imageAlt: 'Portrait of Faisal Bakhtiar, Sales and Marketing',
   },
 ]

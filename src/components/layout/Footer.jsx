@@ -125,6 +125,17 @@ export function Footer() {
           <p>
             © {year} {SITE.name}. All rights reserved. Based in Sharjah, United Arab Emirates.
           </p>
+          <p className="text-[0.72rem] text-white/60">
+            Powered by{' '}
+            <a
+              href="https://stryvon.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 underline decoration-white/30 underline-offset-2 transition hover:text-white"
+            >
+              Stryvon.AI
+            </a>
+          </p>
           <p className="max-w-md text-[0.7rem] leading-relaxed sm:text-right">
             Women empowerment events in the UAE · Community events in Sharjah · Women networking and
             entrepreneurship · Event management and promotion across the Emirates.

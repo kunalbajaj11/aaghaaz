@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Quote, X } from 'lucide-react'
 import { TESTIMONIALS } from '../../data/testimonials'
 import { Container } from '../ui/Container'
 
 export function Testimonials() {
   const [index, setIndex] = useState(0)
+  const [expanded, setExpanded] = useState(null)
   const total = TESTIMONIALS.length
 
   useEffect(() => {
@@ -14,6 +15,24 @@ export function Testimonials() {
     }, 7000)
     return () => window.clearInterval(id)
   }, [total])
+
+  useEffect(() => {
+    if (!expanded) return undefined
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setExpanded(null)
+      }
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [expanded])
 
   const active = TESTIMONIALS[index]
 
@@ -34,7 +53,7 @@ export function Testimonials() {
             Proof, told quietly.
           </h2>
           <p className="mt-3 text-base text-aaghaaz-muted">
-            Placeholder testimonials for launch—written to reflect the tone guests and partners describe.
+            Real words from members and founders who have grown with the Aaghaaz community.
           </p>
         </div>
 
@@ -60,6 +79,13 @@ export function Testimonials() {
                 <span className="mx-2 text-aaghaaz-teal">·</span>
                 <span>{active.role}</span>
               </figcaption>
+              <button
+                type="button"
+                className="mt-5 inline-flex items-center rounded-full border border-aaghaaz-900/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-aaghaaz-900 transition hover:border-aaghaaz-teal/40 hover:text-aaghaaz-teal"
+                onClick={() => setExpanded(active)}
+              >
+                Read more
+              </button>
             </motion.figure>
           </AnimatePresence>
 
@@ -108,9 +134,62 @@ export function Testimonials() {
               <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-aaghaaz-teal">
                 {t.name}
               </p>
+              <button
+                type="button"
+                className="mt-4 inline-flex items-center rounded-full border border-aaghaaz-900/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-aaghaaz-900 transition hover:border-aaghaaz-teal/40 hover:text-aaghaaz-teal"
+                onClick={() => setExpanded(t)}
+              >
+                Read more
+              </button>
             </li>
           ))}
         </ul>
+
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-aaghaaz-950/60 px-4 py-8"
+              onClick={() => setExpanded(null)}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={`testimonial-modal-title-${expanded.id}`}
+                className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-aaghaaz-900/10 bg-white p-7 shadow-soft sm:p-9"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-aaghaaz-900/10 text-aaghaaz-900 transition hover:border-aaghaaz-teal/40 hover:text-aaghaaz-teal"
+                  aria-label="Close testimonial"
+                  onClick={() => setExpanded(null)}
+                >
+                  <X className="h-4 w-4" aria-hidden />
+                </button>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-aaghaaz-teal">
+                  Full testimonial
+                </p>
+                <h3
+                  id={`testimonial-modal-title-${expanded.id}`}
+                  className="mt-2 font-display text-2xl text-aaghaaz-950"
+                >
+                  {expanded.name}
+                </h3>
+                <p className="mt-1 text-sm text-aaghaaz-muted">{expanded.role}</p>
+                <p className="mt-6 whitespace-pre-line text-[1.02rem] leading-relaxed text-aaghaaz-900">
+                  {expanded.fullQuote}
+                </p>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Container>
     </section>
   )

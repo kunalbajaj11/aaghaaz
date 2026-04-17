@@ -21,4 +21,32 @@ export const TEAM_MEMBERS = [
     image: '/team/faisal-sheikh.png',
     imageAlt: 'Portrait of Faisal Bakhtiar, Sales and Marketing',
   },
+  {
+    id: 'lubna-tufel-khan',
+    name: '',
+    role: 'Mrs. Lubna Tufel Khan - Team Leader',
+    image: '/team/team-leader-lubna-tufel-khan.png',
+    imageAlt: 'Portrait of Mrs. Lubna Tufel Khan, Team Leader',
+  },
+  {
+    id: 'beena-nasir',
+    name: '',
+    role: 'Mrs. Beena Nasir - Director',
+    image: '/team/director-beena-nasir.png',
+    imageAlt: 'Portrait of Mrs. Beena Nasir, Director',
+  },
+  {
+    id: 'rabia-waseem',
+    name: '',
+    role: 'Mrs. Rabia Waseem - Director',
+    image: '/team/director-rabia-waseem.png',
+    imageAlt: 'Portrait of Mrs. Rabia Waseem, Director',
+  },
+  {
+    id: 'hafsa-abdul-sattar',
+    name: '',
+    role: 'Miss Hafsa Abdul Sattar - Director',
+    image: '/team/director-hafsa-abdul-sattar.png',
+    imageAlt: 'Portrait of Miss Hafsa Abdul Sattar, Director',
+  },
 ]

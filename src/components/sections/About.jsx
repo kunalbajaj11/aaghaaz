@@ -105,7 +105,7 @@ export function About() {
                     <img
                       src={member.image}
                       alt={member.imageAlt}
-                      className={`h-full w-full ${isCeo ? 'object-contain p-2' : 'object-cover object-top'}`}
+                      className="h-full w-full object-cover object-top"
                       width={720}
                       height={900}
                       loading="lazy"

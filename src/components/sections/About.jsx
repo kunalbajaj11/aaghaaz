@@ -96,7 +96,7 @@ export function About() {
           </motion.h3>
           <ul className="mt-8 grid list-none gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:max-w-6xl">
             {TEAM_MEMBERS.map((member) => {
-              const isCeo = member.id === 'ceo'
+              const isCeo = member.role.toLowerCase().includes('ceo')
 
               return (
               <motion.li key={member.id} variants={fadeUp}>

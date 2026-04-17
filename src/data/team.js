@@ -8,6 +8,13 @@ export const TEAM_MEMBERS = [
     imageAlt: 'Portrait of Dr Shahin Ismail Khatri, CEO',
   },
   {
+    id: 'ceo-adnan-khatri',
+    name: '',
+    role: 'Adnan Khatri - CEO',
+    image: '/team/ceo-adnan-khatri.png',
+    imageAlt: 'Portrait of Adnan Khatri, CEO',
+  },
+  {
     id: 'director-ops',
     name: '',
     role: 'Faraz Ahmed Hussaini - Operations & Support',

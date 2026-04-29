@@ -22,13 +22,6 @@ export const TEAM_MEMBERS = [
     imageAlt: 'Portrait of Faraz Ahmed Hussaini, Director',
   },
   {
-    id: 'director-ops',
-    name: 'Faraz Ahmed Hussain',
-    role: 'Director: Operations & Support',
-    image: '/team/director-operation-support.png',
-    imageAlt: 'Portrait of Faraz Ahmed Hussaini, Operations and Support',
-  },
-  {
     id: 'faisal-sheikh',
     name: 'Mr Faisal Bakhtiar',
     role: 'Marketing Manager',

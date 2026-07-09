@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 /**
  * Mock events — shape ready for CMS/API (id, slug, dates, media, tags).
  * status: upcoming | past; popular flags featured placement.
@@ -5,65 +7,65 @@
 export const EVENTS = [
   {
     id: 'evt-1',
-    slug: 'wellness-circle-sharjah',
-    title: 'The Wellness Circle — Sharjah Edition',
-    dateISO: '2026-05-18',
-    dateLabel: '18 May 2026',
-    location: 'Al Majaz, Sharjah',
+    slug: 'cancer-awareness',
+    title: 'Cancer Awareness Event',
+    dateISO: 'October 2026',
+    dateLabel: 'October 2026',
+    location: 'Sharjah',
     category: 'Health & Community',
     summary:
-      'An intimate evening of guided conversation, gentle movement, and expert-led habits for sustainable energy.',
+      'A supportive community initiative dedicated to spreading awareness, providing vital resources, and standing in solidarity with those affected by cancer.',
     image:
-      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1625869736621-784a42674da4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageAlt:
-      'Women seated in a softly lit wellness circle during a community event',
+      'Women seatead holding paitents hand',
     status: 'upcoming',
     popular: true,
   },
   {
     id: 'evt-2',
-    slug: 'rise-founders-brunch',
-    title: 'Rise Founders Brunch',
-    dateISO: '2026-06-02',
-    dateLabel: '2 June 2026',
+    slug: 'independence-day-and-back-to-school',
+    title: 'Idependence Day & Back To School Gathering ',
+    dateISO: 'August 2026',
+    dateLabel: 'August 2026',
     location: 'Sharjah, UAE',
-    category: 'Entrepreneurship',
+    category: 'Kids & Families',
     summary:
-      'A refined brunch for women scaling ideas across the Emirates—warm introductions, honest panels, and quiet wins celebrated aloud.',
+      'A vibrant community event to honor our heritage with cultural festivities, patriotic displays, and family fun.',
     image:
-      'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=900&h=600&fit=crop&q=80',
-    imageAlt: 'Elegant brunch table setup for a women founders networking event',
+      'https://d3pc1xvrcw35tl.cloudfront.net/ln/images/420x315/india-pakistan-independence-day-2024_202408787979.jpg',
+    imageAlt: 'Men showing equality by holding differnet flags together',
     status: 'upcoming',
     popular: true,
   },
   {
     id: 'evt-3',
-    slug: 'little-makers-saturday',
-    title: 'Little Makers Saturday',
-    dateISO: '2026-05-24',
-    dateLabel: '24 May 2026',
-    location: 'Family Hub, Sharjah',
+    slug: 'little-makers-week',
+    title: 'Little Makers week',
+    dateISO: '2026-07-13',
+    dateLabel: '13 July 2026 - 27 August 2026',
+    location: 'Online, Google meets',
     category: 'Kids & Families',
     summary:
-      'Creative stations, calm facilitators, and a mothers’ lounge—so families can connect without rushing.',
+      'A collaborative creative workshop designed for mothers and children to build, craft, cook, and experiment on fun projects together.',
     image:
-      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&h=600&fit=crop&q=80',
-    imageAlt: 'Children engaged in a creative craft activity at a community event',
+      'https://images.unsplash.com/photo-1758598737882-4d6d61886bde?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageAlt: 'Happy little girl is drawing at home with caring mother using pencils having fun in modern apartment. Creative leisure activity and childhood concept.',
     status: 'upcoming',
     popular: false,
   },
   {
     id: 'evt-4',
-    slug: 'voices-that-lift',
-    title: 'Voices That Lift',
-    dateISO: '2026-03-08',
-    dateLabel: '8 March 2026',
-    location: 'Sharjah Ladies Club',
-    category: 'Motivation',
+    slug: '13th-anniverssary',
+    title: 'Aaghaaz 13th Anniversary ',
+    dateISO: '2026-06-28',
+    dateLabel: '28 June 2026',
+    location: 'Sharjah, Afghaan Tandoor Restaurant',
+    category: 'Celebration & Community',
     summary:
-      'A standing-room gathering of stories that steadied rooms—grit, grace, and the quiet courage of starting again.',
+      'Aaghaaz 13th Anniversary Celebration: A milestone event celebrating 13 years of empowering',
     image:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&h=600&fit=crop&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDgSACBJp-g-_Q_BYd3isFgo1I5WpIweYFQ2S9JNi7w&s=10',
     imageAlt: 'Speaker addressing an attentive audience at a women’s leadership event',
     status: 'past',
     popular: true,
@@ -100,4 +102,19 @@ export const EVENTS = [
     status: 'past',
     popular: true,
   },
+  {
+    id: 'evt-7',
+    slug: 'eco-debate',
+    title: 'Going Eco is essential or not?',
+    dateISO: '2026-08-08',
+    dateLabel: '08 August 2026',
+    location: 'sharjah,london city university, near expo 2020',
+    category: 'Debate',
+    summary:
+    'Debate About Why Going Eco Is Essential For The Economy/Future or Against it cost, challenges, or alternative priorites',
+    image:
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLaltHlEKgTTf5gJ-KcLVb1jR8sdT9V24_g-jVDiWsA&s=10',
+    status: 'upcoming',
+    popular: false,
+  }
 ]

@@ -6,6 +6,7 @@ import {
   Sparkles,
   Stethoscope,
   Users,
+  Gem,
 } from 'lucide-react'
 
 /** Signature event categories — icons resolved in component */
@@ -58,5 +59,11 @@ export const EVENT_CATEGORIES = [
     description:
       'Intentional social moments—tea circles, cultural evenings, and celebrations rooted in respect.',
     icon: Users,
+  },
+  {
+    id:'matrimonial',
+    title:'Matrimonial Event',
+    description:'Thoughtful and respectfil connections for families seeking long-term compatibility.',
+    icon: Gem,
   },
 ]
